@@ -1,0 +1,102 @@
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.thead_dark{
+    background: #2b3d51;
+    color: #fff;
+}
+
+.thead_dark tr th{
+    border: solid 1px #435467;
+}
+
+
+
+/*BG-CUSTOM*/
+.bg-primary{color: #fff;}
+.bg-success{color: #fff;}
+.bg-danger{color: #fff;}
+.bg-dark{background-color: #333333; border-color: #242424;color: #fff;}
+.bg-random-1{background-color: #006D77; border-color: #03565e; color: #fff;}
+.bg-random-2{ background-color: #ef6255;border-color: #ca4b3f; color: #fff;}
+.bg-random-3{background-color: #0917ab; border-color: #09159b; color: #fff;}
+.bg-random-4{background-color: #9f0c6f; border-color: #810b5a; color: #fff;}
+.bg-random-5{background-color: #738d9d; border-color: #5c7280; color: #fff;}
+.bg-random-6{background-color: #2D5D7B; border-color: #24485f; color: #fff;}
+.bg-random-6{background-color: #457EAC; border-color: #3a6991; color: #fff;}
+.bg-random-7{background-color: #9191E9; border-color: #7e7eca; color: #fff;}
+.bg-random-8{background-color: #9191E9; border-color: #8484d3; color: #fff;}
+
+.bg-random-9{background-color: #5A1807; border-color: #421105; color: #fff;}
+.bg-random-10{background-color: #040403; border-color: #040403; color: #fff;}
+.bg-random-11{background-color: #2980B9; border-color: #1f6391; color: #fff;}
+.bg-random-12{background-color: #E74C3C; border-color: #bb3527; color: #fff;}
+.bg-random-13{background-color: #ECE920; border-color: #c2bf17; color: #fff;}
+.bg-random-14{background-color: #D68910; border-color: #b17411; color: #fff;}
+.bg-random-15{background-color: #16A085; border-color: #0e725e; color: #fff;}
+
+/* .bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;}
+.bg-random-5{background-color: #E29578; border-color: #E29578; color: #000;} */
+
+
+
+/* .bg-random-1{
+    background-color: #333;
+    border-color: #333;
+}
+.bg-random-1{
+    background-color: #333;
+    border-color: #333;
+}
+.bg-random-1{
+    background-color: #333;
+    border-color: #333;
+}
+.bg-random-1{
+    background-color: #333;
+    border-color: #333;
+}
+.bg-random-1{
+    background-color: #333;
+    border-color: #333;
+}
+.bg-random-1{
+    background-color: #333;
+    border-color: #333;
+}
+.bg-random-1{
+    background-color: #333;
+    border-color: #333;
+} */
+
+
+
+.text-dark > div >.title_asign{color: #242424 !important; } .text-dark > .iconbor{ border: 1px dashed #242424 !important;} .text-dark > .iconbor > i{ color: #242424 !important;}
+.text-random-1 > div >.title_asign{color: #3e5abd !important;} .text-random-1 > .iconbor{ border: 1px dashed #3e5abd !important;} .text-random-1 > .iconbor > i{ color: #3e5abd !important;}
+.text-random-2 > div >.title_asign{color: #ef6255 !important;} .text-random-2 > .iconbor{ border: 1px dashed #ef6255 !important;} .text-random-2 > .iconbor > i{ color: #ef6255 !important;}
+.text-random-3 > div >.title_asign{color: #0917ab !important;} .text-random-3 > .iconbor{ border: 1px dashed #0917ab !important;} .text-random-3 > .iconbor > i{ color: #0917ab !important;}
+.text-random-4 > div >.title_asign{color: #9f0c6f !important;} .text-random-4 > .iconbor{ border: 1px dashed #9f0c6f !important;} .text-random-4 > .iconbor > i{ color: #9f0c6f !important;}
+.text-random-5 > div >.title_asign{color: #738d9d !important;} .text-random-5 > .iconbor{ border: 1px dashed #738d9d !important;} .text-random-5 > .iconbor > i{ color: #738d9d !important;}
+.text-random-6 > div >.title_asign{color: #2D5D7B !important;} .text-random-6 > .iconbor{ border: 1px dashed #2D5D7B !important;} .text-random-6 > .iconbor > i{ color: #2D5D7B !important;}
+.text-random-7 > div >.title_asign{color: #457EAC !important;} .text-random-7 > .iconbor{ border: 1px dashed #457EAC !important;} .text-random-7 > .iconbor > i{ color: #457EAC !important;}
+.text-random-8 > div >.title_asign{color: #9191E9 !important;} .text-random-8 > .iconbor{ border: 1px dashed #9191E9 !important;} .text-random-8 > .iconbor > i{ color: #9191E9 !important;}
+.text-random-9 > div >.title_asign{color: #5A1807 !important;} .text-random-9 > .iconbor{ border: 1px dashed #5A1807 !important;} .text-random-9 > .iconbor > i{ color: #5A1807 !important;}
+.text-random-10 > div >.title_asign{color: #040403 !important;} .text-random-10 > .iconbor{ border: 1px dashed #040403 !important;} .text-random-10 > .iconbor > i{ color: #040403 !important;}
+.text-random-11 > div >.title_asign{color: #2980B9 !important;} .text-random-11 > .iconbor{ border: 1px dashed #2980B9 !important;} .text-random-11 > .iconbor > i{ color: #2980B9 !important;}
+.text-random-12 > div >.title_asign{color: #E74C3C !important;} .text-random-12 > .iconbor{ border: 1px dashed #E74C3C !important;} .text-random-12 > .iconbor > i{ color: #E74C3C !important;}
+.text-random-13 > div >.title_asign{color: #ECE920 !important;} .text-random-13 > .iconbor{ border: 1px dashed #ECE920 !important;} .text-random-13 > .iconbor > i{ color: #ECE920 !important;}
+.text-random-14 > div >.title_asign{color: #D68910 !important;} .text-random-14 > .iconbor{ border: 1px dashed #D68910 !important;} .text-random-14 > .iconbor > i{ color: #D68910 !important;}
+.text-random-15 > div >.title_asign{color: #16A085 !important;} .text-random-15 > .iconbor{ border: 1px dashed #16A085 !important;} .text-random-15 > .iconbor > i{ color: #16A085 !important;}
