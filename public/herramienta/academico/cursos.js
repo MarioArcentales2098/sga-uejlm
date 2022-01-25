@@ -218,7 +218,7 @@ function generateAsign(element, asignados){
 
                     var span_doc = document.createElement('span')
                         span_doc.setAttribute('class', 'card-asign-desc text-uppercase')
-                        span_doc.innerText = "DOCENTE: "+element.usuario_papellido +' '+ element.usuario_sapellido +' '+ element.usuario_pnombre +' '+ element.usuario_snombre;
+                        span_doc.innerText = "DOCENTE: "+ element.usuario_papellido +' '+ element.usuario_sapellido +' '+ element.usuario_pnombre +' '+ element.usuario_snombre;
                     div_content.append(span_doc)
 
                     var span_cod = document.createElement('span')
