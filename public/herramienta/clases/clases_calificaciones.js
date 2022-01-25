@@ -339,7 +339,7 @@ function generarEstudiantesCalificacionesQuimestre(){
                         var td_estudiante = document.createElement('td');
                             td_estudiante.setAttribute("class", "text-center")
                             td_estudiante.setAttribute("rowspan", "2")
-                            td_estudiante.innerHTML = "TOTAL"
+                            td_estudiante.innerHTML = "Promedio"
                         tr_general.append(td_estudiante)
                     document.getElementById('table_calificaciones').append(tr_general)
 
@@ -486,7 +486,7 @@ function generarEstudiantesCalificaciones(){
                                 td_total.style.borderTop = "solid 1px #dee2e6";
                                 td_total.style.padding = "0px";
                                 td_total.setAttribute("class", "text-center");
-                                td_total.innerHTML = `<div style="transform: rotate(270deg);">Calificación final</div>`;
+                                td_total.innerHTML = `<div style="transform: rotate(270deg);">Promedio final</div>`;
                             tr_general.append(td_total)
                         }
                     document.getElementById('table_calificaciones').append(tr_general)

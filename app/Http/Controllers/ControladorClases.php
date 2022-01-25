@@ -579,7 +579,7 @@ class ControladorClases extends Controller
 
         return response()->json([
             'vairable2' => $vairable2,
-            'success' => 'No se pudo modificar, vuelva a intentarlo.'
+            'success' => 'Actividad creada con éxito.'
         ]);
     }
     public function eliminarActividadParcial(Request $request)
