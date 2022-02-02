@@ -401,7 +401,11 @@
                                                 @if (sizeof($calificaciones) > 0)
                                                     @foreach ($calificaciones as $notas)
                                                         @if ($notas->matriculado_fk == $item->ident_matricula && $parcial->id == $notas->parcial_fk)
-                                                            {{$notas->calificacion}}
+                                                            @if ($notas->calificacion == 0.00)
+                                                                -
+                                                            @else
+                                                                {{$notas->calificacion}}
+                                                            @endif                                                        
                                                         @endif
                                                         @php
                                                             if ($contador_interno == 1) {
@@ -410,7 +414,7 @@
                                                         @endphp
                                                     @endforeach
                                                 @else
-                                                    0.00
+                                                -
                                                 @endif
                                                 </td>
                                                 @php $contador++; @endphp
@@ -421,12 +425,16 @@
                                             @php $contador_interno_1 = 0; @endphp
                                             @foreach ($calificaciones_examen as $examen_quimestre)
                                                 @if ($examen_quimestre->quimestre_fk == $quim->id && $examen_quimestre->matriculado_fk == $item->ident_matricula)
-                                                <td class="text-right">{{$examen_quimestre->calificacion}}</td>
+                                                    @if ($examen_quimestre->calificacion == 0.00)
+                                                        <td class="text-right">-</td>
+                                                    @else
+                                                        <td class="text-right">{{$examen_quimestre->calificacion}}</td>
+                                                    @endif                                                
                                                 @php $contador_interno_1++; @endphp
                                                 @endif
                                             @endforeach
                                             @if ($contador_interno_1 == 0)
-                                                <td class="text-right">0.00</td>
+                                                <td class="text-right">-</td>
                                             @endif
                                             @php $contador++; @endphp
                                         @endif
@@ -434,13 +442,17 @@
                                             @php $contador_interno_2 = 0; @endphp
                                             @foreach ($calificaciones_quimestre as $notas_quimestre)
                                                 @if ($notas_quimestre->quimestre_fk == $quim->id && $notas_quimestre->matriculado_fk == $item->ident_matricula)
-                                                <td class="text-right">{{$notas_quimestre->calificacion}}</td>
+                                                    @if ($notas_quimestre->calificacion == 0.00)
+                                                        <td class="text-right">-</td>
+                                                    @else
+                                                        <td class="text-right">{{$notas_quimestre->calificacion}}</td>
+                                                    @endif                                                
                                                 @php $contador_interno_2++; @endphp
                                                 {{array_push($array_notas, $notas_quimestre->calificacion)}}
                                                 @endif
                                             @endforeach
                                             @if ($contador_interno_2 == 0)
-                                                <td class="text-right">0.00</td>
+                                                <td class="text-right">-</td>
                                             @endif
                                         @endif
                                     @endforeach

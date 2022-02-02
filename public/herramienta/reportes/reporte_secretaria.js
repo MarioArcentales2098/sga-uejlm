@@ -38,7 +38,7 @@ function searchAsignaturesCurso(identificador){
 function llenadoAsignaturas(asignaturas) {
     var datosSelect = new Array();
         datosSelect.push({ id : '--', text: '-- Seleccionar --'})
-        datosSelect.push({ id : 'ALL', text: 'Todas'})
+        //datosSelect.push({ id : 'ALL', text: 'Todas'})
         asignaturas.forEach(element => {
             datosSelect.push({
                 id: element.clase_id+'-'+element.clase_token,
