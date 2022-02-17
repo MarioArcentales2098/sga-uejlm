@@ -458,25 +458,63 @@ function generarEstudiantesCalificaciones(){
                     var tr_general = document.createElement('tr');
                         tr_general.setAttribute('class','td text-name-estu tr_cont')
                         var td_estudiante = document.createElement('td');
-                            td_estudiante.setAttribute("class", "text-center")
+                            td_estudiante.setAttribute("class", "text-center font-weight-bold tamaniocelda")
                             if (actividades.length > 0) {
                                 td_estudiante.style.border = "none"
                                 td_estudiante.style.borderTop = "solid 1px #dee2e6"
                             }
-                            td_estudiante.innerHTML = "--"
+                            td_estudiante.setAttribute("rowspan", "2")
+                            td_estudiante.innerHTML = "Nombres"
                         tr_general.append(td_estudiante)
+                        
+                        var auxEs = null;
+                        var elemento_cantidad = 0;
+
+                        var auxiliarActv = data.actividades;
 
                         actividades.forEach(element => {
-                            var td_estudiante = document.createElement('td');
-                                td_estudiante.setAttribute("class", "text-center text-activity")
-                                td_estudiante.setAttribute("data-toggle", "tooltip")
-                                td_estudiante.setAttribute("data-placement", "left")
-                                td_estudiante.setAttribute("title", element.actividad_nombre)
-                                td_estudiante.setAttribute("onclick", "eliminarActividad("+element.id+")")
-                                td_estudiante.style.backgroundColor = element.actividad_color
-                                td_estudiante.innerHTML = `<div style="transform: rotate(270deg);"><span class="text-strong" >${element.nombre}</span></div>`
-                            tr_general.append(td_estudiante)
+                            
+                            if (auxEs != element.actividad_nombre) {
+                                auxiliarActv.every(elementI =>{
+                                    if (elementI.actividad_nombre != element.actividad_nombre) {
+                                        
+                                    }else{
+                                        elemento_cantidad= elemento_cantidad+1
+                                    }
+                                    
+                                    return true;
+                                });
+                                //console.log("T-actv: "+element.actividad_nombre+ " Valor "+elemento_cantidad)
+                                
+                                var td_estudiante2 = document.createElement('td');
+                                    td_estudiante2.setAttribute("class", "text-center text-white text-activity")
+                                    td_estudiante2.style.backgroundColor = element.actividad_color
+                                    td_estudiante2.style.border = "none"
+                                    td_estudiante2.style.borderTop = "solid 1px #dee2e6"
+                                    td_estudiante2.innerHTML = `<div><span class="text-strong">${element.actividad_nombre}</span></div>`
+                                    //console.log(actividades.length + " Valor "+ elemento_cantidad)
+                                    td_estudiante2.setAttribute("colspan", actividades.length < 1 ? elemento_cantidad + 1 : elemento_cantidad)
+                                    auxEs = element.actividad_nombre
+                                    tr_general.append(td_estudiante2)
+                                elemento_cantidad = 0
+                                //document.getElementById('table_calificaciones').append(tr_general)
+                            }
+                            
+                            /*if (auxEs != element.actividad_nombre) {
+                                    var td_estudiante2 = document.createElement('td');
+                                        td_estudiante2.setAttribute("class", "text-center text-activity")
+                                        td_estudiante2.style.backgroundColor = element.actividad_color
+                                        td_estudiante2.innerHTML = `<div><span class="text-strong">${element.actividad_nombre}</span></div>`
+                                        console.log(actividades.length + " Valor "+ elemento_cantidad)
+                                        td_estudiante2.setAttribute("colspan", actividades.length < 1 ? elemento_cantidad + 1 : elemento_cantidad)
+                                        auxEs = element.actividad_nombre
+                                        tr_general.append(td_estudiante2)
+                                        elemento_cantidad = 0
+                                }else{
+                                    elemento_cantidad= elemento_cantidad + 1
+                                }*/
                         });
+                        document.getElementById('table_calificaciones').append(tr_general)
 
                         if (actividades.length > 0) {
                             var td_total = document.createElement('td');
@@ -485,11 +523,31 @@ function generarEstudiantesCalificaciones(){
                                 td_total.style.border = "none";
                                 td_total.style.borderTop = "solid 1px #dee2e6";
                                 td_total.style.padding = "0px";
-                                td_total.setAttribute("class", "text-center");
-                                td_total.innerHTML = `<div style="transform: rotate(270deg);">Promedio final</div>`;
+                                td_total.setAttribute("class", "text-center font-weight-bold");
+                                td_total.setAttribute("rowspan", "2")
+                                td_total.innerHTML = `<div>Promedio final</div>`;
                             tr_general.append(td_total)
                         }
                     document.getElementById('table_calificaciones').append(tr_general)
+
+                    var tr_general = document.createElement('tr');
+                    actividades.forEach(element => {
+                         var td_estudiante = document.createElement('td');
+                                td_estudiante.setAttribute("class", "text-center text-activity font-weight-bold")
+                                td_estudiante.setAttribute("data-toggle", "tooltip")
+                                td_estudiante.setAttribute("data-placement", "left")
+                                td_estudiante.setAttribute("title", element.actividad_nombre)
+                                td_estudiante.setAttribute("onclick", "eliminarActividad("+element.id+")")
+                                td_estudiante.style.backgroundColor = "#dee2e6"
+                                td_estudiante.style.border = "none"
+                                td_estudiante.style.borderTop = "solid 1px #dee2e6"
+                                //td_estudiante.style.backgroundColor = element.actividad_color
+                                td_estudiante.innerHTML = `<div><span class="text-strong">${element.nombre}</span></div>`
+                    
+                        tr_general.append(td_estudiante)
+                    });
+                    document.getElementById('table_calificaciones').append(tr_general)
+
                     if(alumnos.length > 0){
 
                     alumnos.forEach(element => {

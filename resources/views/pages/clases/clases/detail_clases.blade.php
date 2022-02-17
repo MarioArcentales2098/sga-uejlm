@@ -76,7 +76,7 @@
     }
 
     .text-activity{
-        height: 225px;
+        height: 105px;
         width: 10px;
         cursor: pointer;
         border: 1px solid #818181;
@@ -84,6 +84,10 @@
         /* border-bottom: 1px solid #818181;         */
     }
 
+    .tamaniocelda{
+        min-width: 170px;
+    }
+    
     .text-activity >div{
         /* writing-mode: vertical-lr; */
         /* transform: rotate(180deg); */
@@ -197,7 +201,7 @@
                                                 </div>
                                             </div>
                                         </div>    
-                                        <div class="ml-auto col-md-4">
+                                        <!--<div class="ml-auto col-md-4">
                                             <div style="border:1px solid #DEE2E6;border-radius:9px;padding:8px;">
                                                 @foreach ($actividades as $actividad)
                                                 <div class="d-flex align-items-center">
@@ -206,7 +210,7 @@
                                                 </div>
                                                 @endforeach
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
 
@@ -216,7 +220,7 @@
                                         <input class="form-control form-control-sm w-25" id="input_calificaciones" type="text" placeholder="Buscar....." autocomplete="off">
                                     </div>
                                     <div class="table-responsive">
-                                        <table class="tablesaw-custom table table-striped  table-sm mb-0">
+                                        <table class="tablesaw-custom table table-striped table-sm mb-0">
                                             <tbody id="table_calificaciones"></tbody>
                                         </table>
                                     </div>

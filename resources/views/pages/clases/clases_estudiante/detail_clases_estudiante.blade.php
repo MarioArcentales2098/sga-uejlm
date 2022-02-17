@@ -206,7 +206,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="ml-auto col-md-4">
+                                        <!--<div class="ml-auto col-md-4">
                                             <div style="border:1px solid #DEE2E6;border-radius:9px;padding:8px;">
                                                 @foreach ($actividades as $actividad)
                                                 <div class="d-flex align-items-center">
@@ -215,7 +215,7 @@
                                                 </div>
                                                 @endforeach
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
 
