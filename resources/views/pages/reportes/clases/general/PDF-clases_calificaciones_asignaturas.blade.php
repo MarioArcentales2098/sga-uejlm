@@ -371,7 +371,7 @@
                     <table class="table table-bordered">
                         <thead class="thead-dark-1">
                             <tr>
-                                <th class="text-center" rowspan="2" width="40%">Estudiante</th>
+                                <th class="text-center" rowspan="2" width="40%">Asignatura</th>
                                 @foreach ($quimestre as $quim)
                                     <th class="text-center" colspan="4" width="25%">{{$quim->nombre}}</th>
                                 @endforeach
